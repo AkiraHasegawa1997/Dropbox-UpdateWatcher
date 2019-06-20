@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 set -eu
-DIR="/home/share/Dropbox/doc"
+DROPBOX_DIR="/home/share/Dropbox/doc"
 
-while inotifywait -e moved_to -r $DIR; do
-  cd $DIR && make
+while inotifywait -e moved_to -r $DROPBOX_DIR; do
+  cd $DROPBOX_DIR && make
 done
