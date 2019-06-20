@@ -1,0 +1,14 @@
+[Unit]
+Description=Watcher for the Dropbox Directory
+
+[Service]
+Type=simple
+User=root
+
+## EDIT HERE (SCRIPT LOCATION)
+ExecStart=/srv/dropbox_update_watcher/dwatch.sh
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
